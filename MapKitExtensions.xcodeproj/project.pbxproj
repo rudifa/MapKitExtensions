@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D23B13324DEE11D000549E3 /* MapKitExensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D23B13224DEE11D000549E3 /* MapKitExensions.swift */; };
+		9D23B13424DEE128000549E3 /* MapKitExensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D23B13224DEE11D000549E3 /* MapKitExensions.swift */; };
 		9D42B0E924DEDB3900824CDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D42B0E824DEDB3900824CDC /* AppDelegate.swift */; };
 		9D42B0EB24DEDB3900824CDC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D42B0EA24DEDB3900824CDC /* SceneDelegate.swift */; };
 		9D42B0ED24DEDB3900824CDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D42B0EC24DEDB3900824CDC /* ViewController.swift */; };
@@ -27,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D23B13224DEE11D000549E3 /* MapKitExensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapKitExensions.swift; sourceTree = "<group>"; };
 		9D42B0E524DEDB3900824CDC /* MapKitExtensions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapKitExtensions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D42B0E824DEDB3900824CDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D42B0EA24DEDB3900824CDC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,12 +82,10 @@
 		9D42B0E724DEDB3900824CDC /* MapKitExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				9D42B0E824DEDB3900824CDC /* AppDelegate.swift */,
-				9D42B0EA24DEDB3900824CDC /* SceneDelegate.swift */,
-				9D42B0EC24DEDB3900824CDC /* ViewController.swift */,
-				9D42B0EE24DEDB3900824CDC /* Main.storyboard */,
+				9D42B10B24DEDE1000824CDC /* App */,
+				9D42B10C24DEDE3B00824CDC /* Controllers */,
+				9D42B10A24DEDDF900824CDC /* Extensions */,
 				9D42B0F124DEDB3C00824CDC /* Assets.xcassets */,
-				9D42B0F324DEDB3C00824CDC /* LaunchScreen.storyboard */,
 				9D42B0F624DEDB3C00824CDC /* Info.plist */,
 			);
 			path = MapKitExtensions;
@@ -97,6 +98,33 @@
 				9D42B10124DEDB3C00824CDC /* Info.plist */,
 			);
 			path = MapKitExtensionsTests;
+			sourceTree = "<group>";
+		};
+		9D42B10A24DEDDF900824CDC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9D23B13224DEE11D000549E3 /* MapKitExensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9D42B10B24DEDE1000824CDC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9D42B0E824DEDB3900824CDC /* AppDelegate.swift */,
+				9D42B0EA24DEDB3900824CDC /* SceneDelegate.swift */,
+				9D42B0EE24DEDB3900824CDC /* Main.storyboard */,
+				9D42B0F324DEDB3C00824CDC /* LaunchScreen.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9D42B10C24DEDE3B00824CDC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9D42B0EC24DEDB3900824CDC /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +230,7 @@
 			files = (
 				9D42B0ED24DEDB3900824CDC /* ViewController.swift in Sources */,
 				9D42B0E924DEDB3900824CDC /* AppDelegate.swift in Sources */,
+				9D23B13324DEE11D000549E3 /* MapKitExensions.swift in Sources */,
 				9D42B0EB24DEDB3900824CDC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D23B13424DEE128000549E3 /* MapKitExensions.swift in Sources */,
 				9D42B10024DEDB3C00824CDC /* MapKitExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
