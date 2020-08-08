@@ -20,8 +20,16 @@ class ViewController: UIViewController {
     }
 
     func commonInit() {
-        mapView = MKMapView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.width))
+        mapView = MKMapView(frame: .zero)
         view.addSubview(mapView)
+
+        let safeAreaLayoutGuide = view.safeAreaLayoutGuide
+        mapView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            mapView.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor),
+            mapView.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor),
+            mapView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+        ])
 
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapGestureDetected))
         tapGesture.numberOfTapsRequired = 1
