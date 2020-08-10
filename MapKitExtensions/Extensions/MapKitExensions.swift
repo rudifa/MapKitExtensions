@@ -1,5 +1,5 @@
 //
-//  MapKitE>xtensions.swift v.0.1.0
+//  MapKitExtensions.swift v.0.1.1
 //  MapKitExtensions
 //
 //  Created by Rudolf Farkas on 08.08.20.
@@ -39,7 +39,7 @@ extension CLLocationCoordinate2D {
     ///   - times: augmentation factor
     ///   - minSpanDegrees: minimal span
     /// - Returns: coordinate span
-    func span(to other: CLLocationCoordinate2D, augment times: Double = 1.4, minSpanDegrees: Double = 0.05) -> MKCoordinateSpan {
+    func span(to other: CLLocationCoordinate2D, augment times: Double = 1.2, minSpanDegrees: Double = 0.05) -> MKCoordinateSpan {
         /// Find span between longitudes x and y
         /// - Parameters:
         ///   - x: longitude degrees
@@ -80,19 +80,17 @@ extension MKMapView {
         let region = MKCoordinateRegion(center: center, span: span)
         setRegion(region, animated: true)
 
-        print("coordinate1= \(coordinate1), coordinate2= \(coordinate2), center= \(center) span= \(span)")
+        // setCameraBoundary(CameraBoundary(coordinateRegion: region), animated: true)
+
+        //        let zoomRange = CameraZoomRange(
+        //            minCenterCoordinateDistance: 1000,
+        //            maxCenterCoordinateDistance: 100000000
+        //        )
+        //        setCameraZoomRange(zoomRange, animated: true)
+
+        // print("coordinate1= \(coordinate1), coordinate2= \(coordinate2), center= \(center) span= \(span)")
 
         addAnnotation(coordinate: coordinate1, title: "1")
         addAnnotation(coordinate: coordinate2, title: "2")
     }
 }
-
-// let coordGenève = CLLocationCoordinate2DMake(46.204391, 6.143158)
-// let coordLausanne = CLLocationCoordinate2DMake(46.519962, 6.633597)
-// let coordTokyo = CLLocationCoordinate2DMake(35.658581, 139.745438)
-// let coordHonolulu = CLLocationCoordinate2DMake(21.315603, -157.858093)
-
-// mapView.setRegion(coordinate1: coordGenève)
-// mapView.setRegion(coordinate1: coordGenève, coordinate2: coordLausanne)
-// mapView.setRegion(coordinate1: coordTokyo, coordinate2: coordLausanne)
-// mapView.setRegion(coordinate1: coordTokyo, coordinate2: coordHonolulu)
